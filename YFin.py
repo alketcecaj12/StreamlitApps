@@ -14,3 +14,6 @@ ticker = yf.Ticker(title)
 data = ticker.history(period = '5Y')
 st.write(data.head())
 chart = st.line_chart(data['Close'])
+
+# variability
+change = st.line_chart(data['Close'].pct_change()*100)
