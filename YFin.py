@@ -7,9 +7,10 @@ import yfinance as yf
 st.title('Check your titles!')
 st.markdown('### This is an application that shows data and graphics on finance data.')
 
-ticker = yf.Ticker('AAPL')
+title = st.selectbox("Pick your title", ["GOOG", "AAPL", "TSLA", "MSFT"])
+st.write('you selected ', title)
 
+ticker = yf.Ticker(title)
 data = ticker.history(period = '5Y')
 st.write(data.head())
-
 chart = st.line_chart(data['Close'])
