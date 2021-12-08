@@ -25,7 +25,7 @@ st.markdown('#### .. and its variability during the last year! Click on double a
 
 st.line_chart(data['Close'].pct_change()*100)
 
-st.markdown('### The prediction for the next 4 weeks (20 days)')
+st.markdown('### The prediction for the next 4 weeks (20 working days)')
 
 def difference(dataset, interval=1):
     diff = list()
@@ -47,7 +47,7 @@ differenced = difference(X, days_in_year)
 model = ARIMA(differenced, order=(7,0,1))
 model_fit = model.fit()
 # multi-step out-of-sample forecast
-forecast = model_fit.forecast(steps=28)
+forecast = model_fit.forecast(steps=20)
 # invert the differenced forecast to something usable
 history = [x for x in X]
 day = 1
