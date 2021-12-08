@@ -21,7 +21,7 @@ st.markdown('#### Showing the stock as a time series !')
 
 st.line_chart(data['Close'])
 
-st.markdown('#### .. and its return in percentage during the last year! Click on double arrow to expand!')
+st.markdown('#### .. and its return in percentage during the last five years! Click on double arrow to expand!')
 
 st.line_chart(data['Close'].pct_change()*100)
 
