@@ -16,7 +16,7 @@ ticker = yf.Ticker(title)
 data = ticker.history(period = '5Y')
 
 st.markdown('##### A few rows to check the data!')
-st.write(data.head(2))
+st.write(data.tail(2))
 st.markdown('#### Showing the stock as a time series !')
 
 st.line_chart(data['Close'])
