@@ -69,3 +69,5 @@ change = (last_val-current_val) / last_val * 100
 change = round(change, 2)
 
 st.write("### % ", change)
+
+st.write('.. at the end of the forecasting period!')
