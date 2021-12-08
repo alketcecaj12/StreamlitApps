@@ -15,8 +15,8 @@ st.write('You selected --> ', tit_dict[title])
 ticker = yf.Ticker(title)
 data = ticker.history(period = '5Y')
 
-st.markdown('##### A few rows to check the data!')
-st.write(data.tail(2))
+st.markdown('##### Today\'s price !')
+st.write(data.tail(1))
 st.markdown('#### Showing the stock as a time series !')
 
 st.line_chart(data['Close'])
