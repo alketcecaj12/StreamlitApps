@@ -63,6 +63,7 @@ st.line_chart(forecasted_val.values())
 lista = list(forecasted_val.values())
 last_val = lista[-1]
 current_val = data['Close'].iloc[-1]
+st.markdown('### The forecasting methods uses ARIMA')
 st.markdown('### Predicted a change of : ')
 change = (last_val-current_val) / last_val * 100
 change = round(change, 2)
