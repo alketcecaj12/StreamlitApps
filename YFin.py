@@ -22,8 +22,8 @@ st.markdown('#### Showing the stock as a time series and its variability during 
 col1, col2 = st.columns(2)
 
 
-col1.line_chart(data['Close'][:250])
-col2.line_chart(data['Close'][:250].pct_change()*100)
+col1.line_chart(data['Close'])
+col2.line_chart(data['Close'].pct_change()*100)
 
 st.markdown('### The prediction for the next 4 weeks')
 
