@@ -9,7 +9,7 @@ st.title('Check your titles!')
 st.markdown('### Predict the trend of your stocks!')
 tit_dict = {"GOOG":'Google', "AAPL":'Apple', "TSLA":'Tesla', "MSFT":'Microsoft'}
 
-title = st.selectbox("Pick your title", ["GOOG", "AAPL", "TSLA", "MSFT"])
+title = st.selectbox("Pick your title among Google, Apple, Tesla and Microsoft ", ["GOOG", "AAPL", "TSLA", "MSFT"])
 st.write('You selected --> ', tit_dict[title])
 
 ticker = yf.Ticker(title)
