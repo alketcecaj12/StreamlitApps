@@ -17,13 +17,13 @@ data = ticker.history(period = '5Y')
 
 st.markdown('##### A few rows to check the data!')
 st.write(data.head(2))
-st.markdown('#### Showing the stock as a time series and its variability during the last year! Click on double arrow to expand!')
+st.markdown('#### Showing the stock as a time series !')
 
-col1, col2 = st.columns(2)
+st.line_chart(data['Close'])
 
+st.markdown('.. and its variability during the last year! Click on double arrow to expand!')
 
-col1.line_chart(data['Close'])
-col2.line_chart(data['Close'].pct_change()*100)
+st.line_chart(data['Close'].pct_change()*100)
 
 st.markdown('### The prediction for the next 4 weeks')
 
