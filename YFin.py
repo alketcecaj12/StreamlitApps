@@ -21,11 +21,11 @@ st.markdown('#### Showing the stock as a time series !')
 
 st.line_chart(data['Close'])
 
-st.markdown('.. and its variability during the last year! Click on double arrow to expand!')
+st.markdown('#### .. and its variability during the last year! Click on double arrow to expand!')
 
 st.line_chart(data['Close'].pct_change()*100)
 
-st.markdown('### The prediction for the next 4 weeks')
+st.markdown('### The prediction for the next 4 weeks (20 days)')
 
 def difference(dataset, interval=1):
     diff = list()
