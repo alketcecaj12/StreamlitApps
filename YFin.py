@@ -5,7 +5,7 @@ import numpy as np
 import yfinance as yf
 from statsmodels.tsa.arima.model import ARIMA
 
-st.title('Check your titles!')
+st.title('Check your Stocks!')
 st.markdown('### Predict the trend of your stocks!')
 tit_dict = {"GOOG":'Google', "AAPL":'Apple', "TSLA":'Tesla', "MSFT":'Microsoft'}
 
